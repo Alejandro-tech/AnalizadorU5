@@ -1,0 +1,116 @@
+Created by PLY version 3.11 (http://www.dabeaz.com/ply)
+
+Grammar
+
+Rule 0     S' -> declaracion
+Rule 1     declaracion -> ASIGNAR
+Rule 2     declaracion -> VARIABLES
+Rule 3     declaracion -> MAYOR
+Rule 4     declaracion -> IGUAL
+Rule 5     declaracion -> RESTA
+Rule 6     declaracion -> FORMULAS
+Rule 7     declaracion -> STRING
+Rule 8     declaracion -> ESTRUCTURA
+
+Terminals, with rules where they appear
+
+ASIGNAR              : 1
+ESTRUCTURA           : 8
+FORMULAS             : 6
+IGUAL                : 4
+MAYOR                : 3
+RESTA                : 5
+STRING               : 7
+VARIABLES            : 2
+error                : 
+
+Nonterminals, with rules where they appear
+
+declaracion          : 0
+
+Parsing method: LALR
+
+state 0
+
+    (0) S' -> . declaracion
+    (1) declaracion -> . ASIGNAR
+    (2) declaracion -> . VARIABLES
+    (3) declaracion -> . MAYOR
+    (4) declaracion -> . IGUAL
+    (5) declaracion -> . RESTA
+    (6) declaracion -> . FORMULAS
+    (7) declaracion -> . STRING
+    (8) declaracion -> . ESTRUCTURA
+
+    ASIGNAR         shift and go to state 2
+    VARIABLES       shift and go to state 3
+    MAYOR           shift and go to state 4
+    IGUAL           shift and go to state 5
+    RESTA           shift and go to state 6
+    FORMULAS        shift and go to state 7
+    STRING          shift and go to state 8
+    ESTRUCTURA      shift and go to state 9
+
+    declaracion                    shift and go to state 1
+
+state 1
+
+    (0) S' -> declaracion .
+
+
+
+state 2
+
+    (1) declaracion -> ASIGNAR .
+
+    $end            reduce using rule 1 (declaracion -> ASIGNAR .)
+
+
+state 3
+
+    (2) declaracion -> VARIABLES .
+
+    $end            reduce using rule 2 (declaracion -> VARIABLES .)
+
+
+state 4
+
+    (3) declaracion -> MAYOR .
+
+    $end            reduce using rule 3 (declaracion -> MAYOR .)
+
+
+state 5
+
+    (4) declaracion -> IGUAL .
+
+    $end            reduce using rule 4 (declaracion -> IGUAL .)
+
+
+state 6
+
+    (5) declaracion -> RESTA .
+
+    $end            reduce using rule 5 (declaracion -> RESTA .)
+
+
+state 7
+
+    (6) declaracion -> FORMULAS .
+
+    $end            reduce using rule 6 (declaracion -> FORMULAS .)
+
+
+state 8
+
+    (7) declaracion -> STRING .
+
+    $end            reduce using rule 7 (declaracion -> STRING .)
+
+
+state 9
+
+    (8) declaracion -> ESTRUCTURA .
+
+    $end            reduce using rule 8 (declaracion -> ESTRUCTURA .)
+
